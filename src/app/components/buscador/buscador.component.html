@@ -1,0 +1,18 @@
+<h1>Buscando: <small> </small></h1>
+<hr>
+
+<div class="row" *ngIf="heroesClasificados.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existen resultados con el termino.
+        </div>
+    </div>
+</div>
+
+<div class="card-group">
+    <div class="row">
+        <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" class="col-4 animated fadeIn fast mb-3 p-3" *ngFor="let heroe of heroesClasificados, let i = index">
+
+        </app-heroe-tarjeta>
+    </div>
+</div>
